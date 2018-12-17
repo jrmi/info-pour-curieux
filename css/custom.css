@@ -1,0 +1,33 @@
+/* My CSS */
+
+.two-cols{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.three-cols{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.two-rows{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.three-rows{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.vertical-center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.reveal section img.plain {
+    background: none;
+}

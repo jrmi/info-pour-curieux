@@ -1,0 +1,579 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+						# L'informatique pour les curieux
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Objectifs
+
+						- Comprendre les problématiques d'un dév
+						- Pour une meilleure communication
+						- Et pourquoi pas donner envie ?
+						- Il y a volontairement des simplifications
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Introduction
+
+						Pour bien comprendre le métier de **développeur**, il faut bien connaitre **l'outil** qu'il utilise.
+						Nous allons donc d'abord nous attacher à **décrire** ce mystérieux compagnons
+						en commençant par une **vue d'ensemble**.
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Plan
+
+						- L'ordinateur
+						- Le microprocesseur
+						- La donnée
+						- La mémoire
+						- Les périphériques
+						- Le programme
+						- Un peu de pratique
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>L'ordinateur</h1>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Vue globale
+
+						- C'est un outil polyvalent
+						- Constitué :
+						  - D'une unité centrale
+						  - Des périphériques
+						</textarea>
+					</section>
+					<section>
+						<h2>En image</h2>
+						<img src="images/computer-part.png" class="plain" />
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## L'unité centrale
+
+						- Une carte-mère
+						- Un micro-processeur
+						- De la mémoire vive
+						- Des port / des bus / …
+						- Une alimentation
+					
+						</textarea>
+					</section>
+					<section>
+						<h2>En image</h2>
+						<img src="images/centralunit.png" class="plain" />
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Les périphériques
+
+						- Écran, clavier, souris mais aussi…
+						- Carte wifi, webcam, carte son, …
+						- Ce sont les bras et les jambes
+						- Et les 5 sens
+						- Permettent d'interagir avec l'ordinateur
+						</textarea>
+					</section>
+					<section>
+						<h2>Qui dirige ?</h2>
+						<p>Voyons en détails le chef d'orchestre de tout cela !</p>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+						# Le micro-processeur
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Fiche d'identité
+
+						- Un circuit électronique
+						- C'est le cerveau
+						- Composé de milliers de transistor miniatures
+						- Capable de transformer de la donnée
+						</textarea>
+					</section>
+					<section>
+						<h2>L'analogie du cuisinier</h2>
+						<img src="images/chef7.svg" height="400px"/>
+						<p>Hibou le cuistot</p>
+					</section>
+					<section>
+						<h2>Un cuisinier cuisine</h2>
+						<p>Il prend des ingrédients provenant de son placard ou de son réfrigérateur…</p>
+						<img src="images/from-food-chef.png" class="plain" height="300px"/>
+					</section>
+					<section>
+							<h2>Avec une recette</h2>
+							<p>Il les transforme en suivant une recette…</p>
+							<img src="images/chef-cooking.png" class="plain" height="300px"/>
+					</section>
+					<section>
+							<h2>Pour faire des plats</h2>
+							<p>Il produit un plat qu'il met ensuite à cuire pour obtenir le résultat final.</p>
+							<img src="images/chef-cooking-pie.png" class="plain" height="300px"/>
+					</section>
+					<section>
+							<h2>En résumé</h2>
+							<img src="images/cooker-big-picture.png" class="plain" height="500px"/>
+					</section>
+					<section>
+						<h2>Et le microprocesseur dans tout ça ?</h2>
+						<p>Eh bien c'est la même chose, ou presque !</p>
+					</section>
+					<section>
+							<h2>Mais avec des données…</h2>
+							<img src="images/data2cpu.png" class="plain" />
+					</section>
+					<section>
+							<h2>Un programme…</h2>
+							<img src="images/cpu-thinking.png" class="plain" height="500px"/>
+					</section>
+					<section>
+							<h2>et d'autres données</h2>
+							<img src="images/cpu2data.png" class="plain" />
+					</section>
+					<section>
+							<h2>En résumé</h2>
+							<img src="images/cpu-big-picture.png" class="plain" height="500px"/>
+					</section>
+					<section>
+							<h2>D'accord mais…</h2>
+							<p>C'est quoi une donnée ?</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>La donnée</h1>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Fiche d'identité
+
+						- De l'information
+						- En informatique, purement numérique
+						- Physiquement c'est un courant qui passe ou qui ne passe pas
+						- Donc c'est du [binaire](https://www.rapidtables.com/convert/number/decimal-to-binary.html)
+						
+						Prenons un exemple… <!-- .element: class="fragment" data-fragment-index="1" -->
+						</textarea>
+					</section>
+					<section>
+						<h2>L'univers et le reste</h2>
+						<p>C'est quoi <em>42</em> ?</p> <!-- 7 ? -->
+					</section>
+					<section>
+						<h2>Un age</h2>
+						<p>C'est l'âge du capitaine !</p>
+					</section>
+					<section>
+						<h2>Un département</h2>
+						<p>C'est la <a href="http://www.cartesfrance.fr/carte-france-departement/carte-france-departements.html">département français</a>
+							de la <em>Loire</em> 
+						</p>
+					</section>
+					<section>
+						<h2>Un caractère</h2>
+						<p>C'est le caractère <em>*</em> sur 
+							<a href="https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange">la table ASCII</a>
+						</p>
+					</section>
+					<section>
+						<h2>Une date</h2>
+						<p>C'est le <em>11 février 1970</em> à partir de
+							<a href="https://fr.wikipedia.org/wiki/Epoch">Epoch (Unix)</a>
+						</p>
+					</section>
+					<section>
+						<h2>Une couleur</h2>
+						<p>C'est un <em>vert sombre</em> sur la
+							<a href="https://en.wikipedia.org/wiki/File:EGA_Table.PNG">palette EGA</a>
+						</p>
+					</section>
+					<section>
+						<h2>Un son</h2>
+						<p>C'est la <em>fréquence</em> d'un
+							<a href="https://www.youtube.com/watch?v=2349N9YVvzY" class="preview">son grave</a>
+						</p>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Bref
+
+						- La donnée ne porte aucun sens en elle-même
+						- L'important, c'est **l'interprétation**
+						- Il faut donc un accord entre l'émetteur et le récepteur sur sa signification
+						</textarea>
+					</section>
+					<section>
+						<h2>Qui l'utilise ?</h2>
+
+						<p>Le microprocesseur transforme la donnée en provenance &larr;</p>
+						<p class="fragment">des périphériques</p>
+						<p class="fragment">et la transmet à &rarr;</p>
+						<p class="fragment">d'autres périphériques</p>
+						<p class="fragment">En général l'échange de données se fait par l'intermédiaire de la mémoire vive</p>
+						<aside class="notes">
+							C'est la fête au périphérique
+						</aside>
+					</section>
+					<section>
+						<h2>D'accord mais…</h2>
+						<p>C'est quoi la mémoire vive ?</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>La mémoire vive</h1>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Fiche d'identité
+
+						- Ce sont des circuits électroniques
+						- Capables de conserver une donnée tant qu'ils sont alimentés
+						- Un peu comme des interrupteurs commandés
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## À quoi ça ressemble ?
+
+						- Il faut s'imaginer la mémoire comme un long ruban de papier avec des cases
+						- Chaque case peut prendre un nombre entre 0 et 255
+						- C'est ce que l'on apelle un octet soit 8 bit (1 et 0)
+						- Chaque case porte un numéro, on parle d'adresse
+						</textarea>
+					</section>
+					<section>
+						<h2>En image</h2>
+						<img src="images/memory.png" class="plain"/>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Que peut-on faire avec ?
+
+						- On peut écrire une donnée dans une case
+						- On peut lire la donnée contenue dans une case
+						- On choisit la case par son numéro (son adresse)
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## plusieurs types de mémoire
+
+						- Mémoire libre
+						- Les piles
+						- Les files
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Qui utilise la mémoire ?
+
+						- Elle sert de support au micro-processeur pour la manipulation des données
+						- Au même titre qu'un « plan de travail » pour le cuisinier
+						- Mais les périphériques aussi peuvent avoir des mémoires pour leurs données
+						</textarea>
+					</section>
+					<section>
+						<h2>D'accord mais…</h2>
+						<p>C'est quoi un périphérique ?</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Les périphériques</h1>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Fiche d'identité
+
+						- Des appareils électroniques
+						- Avec des éléments qui agissent sur le monde réèl (son, lumière, …)
+						- Et/ou des capteurs (son, lumière, bouton, …)
+						- Capables de produire de la donnée
+						- Ou d'en recevoir
+						- Ils donnent sa représentation à la donnée
+						- Le micro-processeur orchestre les flux de donnée entre eux
+						
+						Prenons quelques exemples… <!-- .element: class="fragment" data-fragment-index="1" -->
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+						## Périphérique d'entrée 1/2
+
+						- Clavier
+						- Souris
+						- Webcam
+						- Scanner
+						- Disque dur / lecteurs
+						- …
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+						## Périphérique d'entrée 2/2
+						- …
+						- Cartes réseaux
+						- Écran tactile
+						- Carte son / Micro
+						- GPS
+						- GPRS
+						- Et bien d'autres
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Périphérique de sortie
+
+						- Carte vidéo / Écran
+						- Imprimante
+						- Disque dur
+						- Carte son / Enceinte
+						- Cartes réseaux
+						- GPRS
+						- …
+						
+						Zoom sur… <!-- .element: class="fragment" data-fragment-index="1" -->
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Le clavier
+
+						- Chaque fois que l'on appuie sur une touche,
+						- Le clavier stocke le [code](https://keycode.info/) de la touche correspondante
+						- Dans une mémoire accessible par le micro-processeur
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## La souris
+
+						- Chaque fois que l'on déplace la souris,
+						- elle stocke le déplacement effectué depuis le dernier envoi
+						- Dans une mémoire accessible par le micro-processeur
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## L'écran
+
+						- Composé de lignes de pixel
+						- Chaque pixel est composé de 3 lumières
+						- Rouge, vert et bleu
+						- et la mémoire liée à l'écran contient la valeur de l'intensité lumineuse 
+						  - de chacune des 3 lumières 
+						  - de chacun des pixels de l'écran
+						- Ce qui permet de composer une image
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Fonctionnement
+
+						Quand il suit un programme, le **micro-processeur** est amené à **dialoguer** avec les diférents périphériques
+						pour leur envoyer ou leur demander de **la donnée**. 
+						C'est grace à ce programme que l'ordinateur devient un outil utile.
+						</textarea>
+					</section>
+					<section>
+						<h2>D'accord mais…</h2>
+						<p>C'est quoi un programme ?</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Le programme</h1>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Fiche d'identité
+
+						- C'est une suite d'ordre / d'instructions
+						- Ce sont des instructions que le micro-processeur va réaliser
+						- Un peu comme une recette de cuisine
+						- Les instructions permettent 
+						  - Principalement de déplacer/copier des données
+						  - Et faire des calculs sur ces données
+						  - Et prendre des décisions sur la suite du programme
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Analogie du 4/4
+
+						La liste des ingrédients à utiliser :
+
+						- 200g de farine
+						- 200g de sucre
+						- 200g de beurre mou
+						- 3 oeufs
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## La recette
+
+						1. Séparez les blancs des jaunes des oeufs
+						2. Mélangez les jaunes avec le beurre mou
+						3. Ajoutez et mélangez le sucre
+						3. Ajoutez et mélangez la farine
+						4. Montez les blancs en neige
+						5. Ajoutez et mélangez les blancs en neige
+						6. Beurrez un moule
+						7. Versez la préparation dans le moule 
+						8. Enfournez pendant 40min à 150°
+
+						Notes:
+
+						La recette est évidement modifiée pour améliorer la lecture.
+
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Quelques remarques
+
+						- Une instruction = une action
+						- Une instruction créé ou transforme un ou plusieurs ingrédients
+						- Ce n'est pas explicitement écrit mais il faut un plan de travail
+						- Et des ustensiles de cuisine
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## En informatique
+
+						La liste des données initiales :
+
+						- 42 dans la case mémoire 10
+						- 10 dans la case mémoire 5
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Le programme
+
+						1. Copier la donnée en provenance du clavier dans la case mémoire 20
+						2. Ajouter 12 à la case mémoire 20
+						3. Ajouter la case mémoire 20 à la case mémoire 10
+						4. Copier la donnée dans la case mémoire 10 dans la case mémoire 0 de l'écran
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## En vrai
+
+						- Évidement en vrai c'est un peu plus « Formel »
+						- Mais la logique est la même
+						- Chaque type d'instruction a été cablée dans le micro-processeur
+						</textarea>
+					</section>
+					<section>
+						<h2>Et en pratique ?</h2>
+						<p>Bon, il est temps de s'amuser 
+							à écrire un programme maintenant.</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Le programme</h1>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Présentation
+
+						- C'est vous qui allez être les développeurs…
+						- Et les processeurs
+						- Vous aurez :
+						  - Une zone de mémoire
+						  - Une feuille de programme
+						  - ...
+
+						1. Je donne une feuille avec des instructions simples
+						2. puis des instructions plus courtes et leur explication
+						2. gestion des données initiales
+						3. puis à eux à écrire le programme simple
+						4. Puis programme complexe
+						  - Notion de variable
+						  - Notion de Référence
+						  - Notion de function
+						  - Notion de recursivité ?
+						  - Répétitions
+						  - Un peu sur les structures
+						  - Test/conditions 
+						  - Multi-tâches
+						5. puis ajout d'un périphérique d'entrée
+						6. puis périphérique de sortie
+
+						</textarea>
+					</section>
+				</section>
+				<!-- Parler du système d'exploitation et du Bios -->
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				history: true,
+				fragmentInURL: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
