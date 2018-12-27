@@ -48,6 +48,7 @@
 						## Introduction
 
 						Pour bien comprendre le métier de **développeur**, il faut bien connaitre **l'outil** qu'il utilise.
+						
 						Nous allons donc d'abord nous attacher à **décrire** ce mystérieux compagnons
 						en commençant par une **vue d'ensemble**.
 						</textarea>
@@ -91,7 +92,7 @@
 						- Une carte-mère
 						- Un micro-processeur
 						- De la mémoire vive
-						- Des port / des bus / …
+						- Des ports / des bus / …
 						- Une alimentation
 					
 						</textarea>
@@ -112,8 +113,12 @@
 						</textarea>
 					</section>
 					<section>
+						<h2>En image</h2>
+						<img src="images/periphericals.png" class="plain" />
+					</section>
+					<section>
 						<h2>Qui dirige ?</h2>
-						<p>Voyons en détails le chef d'orchestre de tout cela !</p>
+						<p>Tout d'abord, voyons en détails le chef d'orchestre de tout cela !</p>
 					</section>
 				</section>
 				<section>
@@ -128,7 +133,7 @@
 
 						- Un circuit électronique
 						- C'est le cerveau
-						- Composé de milliers de transistor miniatures
+						- Composé de milliers de transistors miniatures
 						- Capable de transformer de la donnée
 						</textarea>
 					</section>
@@ -157,7 +162,7 @@
 							<img src="images/cooker-big-picture.png" class="plain" height="500px"/>
 					</section>
 					<section>
-						<h2>Et le microprocesseur dans tout ça ?</h2>
+						<h2>Et le micro-processeur dans tout ça ?</h2>
 						<p>Eh bien c'est la même chose, ou presque !</p>
 					</section>
 					<section>
@@ -189,12 +194,14 @@
 						<textarea data-template>
 						## Fiche d'identité
 
-						- De l'information
-						- En informatique, purement numérique
-						- Physiquement c'est un courant qui passe ou qui ne passe pas
-						- Donc c'est du [binaire](https://www.rapidtables.com/convert/number/decimal-to-binary.html)
+						- C'est de l'information
+						- En informatique ce sont des valeurs numériques
+						- La donnée ne porte aucun sens en elle-même
+						- L'important, c'est **l'interprétation** qu'on lui donne
+						- Il faut donc un accord entre l'émetteur et le récepteur sur sa signification
 						
-						Prenons un exemple… <!-- .element: class="fragment" data-fragment-index="1" -->
+						Prenons un exemple … <!-- .element: class="fragment" data-fragment-index="1" -->
+						
 						</textarea>
 					</section>
 					<section>
@@ -237,11 +244,13 @@
 					</section>
 					<section data-markdown>
 						<textarea data-template>
-						## Bref
+						## Plus concrètement
 
-						- La donnée ne porte aucun sens en elle-même
-						- L'important, c'est **l'interprétation**
-						- Il faut donc un accord entre l'émetteur et le récepteur sur sa signification
+						- Concrètement c'est un courant qui passe ou ne passe
+						- C'est ce que l'on appelle le [binaire](https://www.rapidtables.com/convert/number/decimal-to-binary.html)
+						- A chaque nombre correspond un code binaire
+						- En général on travail avec des codes binaires de 8 chiffres 1 ou 0
+						- 3 = 0000 0011  | 42 = 0010 1010 | 255 = 1111 1111
 						</textarea>
 					</section>
 					<section>
@@ -280,7 +289,7 @@
 
 						- Il faut s'imaginer la mémoire comme un long ruban de papier avec des cases
 						- Chaque case peut prendre un nombre entre 0 et 255
-						- C'est ce que l'on apelle un octet soit 8 bit (1 et 0)
+						- C'est ce que l'on apelle un octet soit 8 bits (1 et 0)
 						- Chaque case porte un numéro, on parle d'adresse
 						</textarea>
 					</section>
@@ -296,6 +305,14 @@
 						- On peut lire la donnée contenue dans une case
 						- On choisit la case par son numéro (son adresse)
 						</textarea>
+					</section>
+					<section>
+						<h2>Mémoriser</h2>
+						<img src="images/memory-write.png" class="plain"/>
+					</section>
+					<section>
+						<h2>Se rappeler</h2>
+						<img src="images/memory-read.png" class="plain"/>
 					</section>
 					<section data-markdown>
 						<textarea data-template>
@@ -333,8 +350,8 @@
 						- Et/ou des capteurs (son, lumière, bouton, …)
 						- Capables de produire de la donnée
 						- Ou d'en recevoir
-						- Ils donnent sa représentation à la donnée
-						- Le micro-processeur orchestre les flux de donnée entre eux
+						- Ils donnent son sens à la donnée
+						- Le micro-processeur orchestre les flux de données entre eux
 						
 						Prenons quelques exemples… <!-- .element: class="fragment" data-fragment-index="1" -->
 						</textarea>
@@ -389,6 +406,14 @@
 						- Dans une mémoire accessible par le micro-processeur
 						</textarea>
 					</section>
+					<section>
+						<h2>Comment ça marche ?</h2>
+						<img src="images/keyboard-extern.png" class="plain"/>
+					</section>
+					<section>
+						<h2>à l'intérieur</h2>
+						<img src="images/keyboard-intern.png" class="plain"/>
+					</section>
 					<section data-markdown>
 						<textarea data-template>
 						## La souris
@@ -402,7 +427,7 @@
 						<textarea data-template>
 						## L'écran
 
-						- Composé de lignes de pixel
+						- Composé de lignes de pixels
 						- Chaque pixel est composé de 3 lumières
 						- Rouge, vert et bleu
 						- et la mémoire liée à l'écran contient la valeur de l'intensité lumineuse 
@@ -411,14 +436,23 @@
 						- Ce qui permet de composer une image
 						</textarea>
 					</section>
+					<section>
+						<h2>Comment ça marche ?</h2>
+						<img src="images/screen-intern.png" class="plain"/>
+					</section>
 					<section data-markdown>
 						<textarea data-template>
 						## Fonctionnement
 
 						Quand il suit un programme, le **micro-processeur** est amené à **dialoguer** avec les diférents périphériques
 						pour leur envoyer ou leur demander de **la donnée**. 
+
 						C'est grace à ce programme que l'ordinateur devient un outil utile.
 						</textarea>
+					</section>
+					<section>
+						<h2>Pour résumer</h2>
+						<img src="images/abstract.png" class="plain"/>
 					</section>
 					<section>
 						<h2>D'accord mais…</h2>
@@ -432,14 +466,25 @@
 					<section data-markdown>
 						<textarea data-template>
 						## Fiche d'identité
-
+							
 						- C'est une suite d'ordre / d'instructions
-						- Ce sont des instructions que le micro-processeur va réaliser
-						- Un peu comme une recette de cuisine
-						- Les instructions permettent 
-						  - Principalement de déplacer/copier des données
-						  - Et faire des calculs sur ces données
-						  - Et prendre des décisions sur la suite du programme
+						- Ce sont des actions que le micro-processeur va réaliser
+						- Un peu comme une recette pour le cuisinier
+						- Chaque type d'instruction a été cablée dans le micro-processeur
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Que font les instructions ?
+							
+						Les instructions permettent principalement :
+
+						- De déplacer/copier des données dans la mémoire 
+						- De lire ou écrire des données sur les périphériques
+						- De faire des calculs avec ces données
+						- Initialiser les données nécessaires dans la mémoire
+						- Et réaliser des tests sur les données pour prendre des
+						décisions sur les prochaines instructions à réaliser
 						</textarea>
 					</section>
 					<section data-markdown>
@@ -476,12 +521,13 @@
 					</section>
 					<section data-markdown>
 						<textarea data-template>
-						## Quelques remarques
+						## Quelques constatations
 
 						- Une instruction = une action
-						- Une instruction créé ou transforme un ou plusieurs ingrédients
+						- Une instruction créée ou transforme un ou plusieurs ingrédients
 						- Ce n'est pas explicitement écrit mais il faut un plan de travail
-						- Et des ustensiles de cuisine
+						- Connaître les pratiques culinaires
+						- Et avoir des ustensiles de cuisine
 						</textarea>
 					</section>
 					<section data-markdown>
@@ -508,9 +554,10 @@
 						<textarea data-template>
 						## En vrai
 
-						- Évidement en vrai c'est un peu plus « Formel »
+						- Évidement en vrai c'est un peu plus « formel »
 						- Mais la logique est la même
-						- Chaque type d'instruction a été cablée dans le micro-processeur
+						- Et on ne programme pas directement dans le langage du microprocesseur
+						- Mais avec des langages plus évolués qui sont traduits dans celui-ci
 						</textarea>
 					</section>
 					<section>
@@ -521,7 +568,7 @@
 				</section>
 				<section>
 					<section>
-						<h1>Le programme</h1>
+						<h1>Suite...</h1>
 					</section>
 					<section data-markdown>
 						<textarea data-template>
@@ -534,7 +581,8 @@
 						  - Une feuille de programme
 						  - ...
 
-						1. Je donne une feuille avec des instructions simples
+						1. Je donne une feuille avec des instructions simple
+						1. C'est à eux d'être l'interpréteur
 						2. puis des instructions plus courtes et leur explication
 						2. gestion des données initiales
 						3. puis à eux à écrire le programme simple
