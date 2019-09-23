@@ -131,6 +131,8 @@
 						<textarea data-template>
 						## Fiche d'identité
 
+						Un micro-processeur c'est: 
+
 						- Un circuit électronique
 						- C'est le cerveau
 						- Composé de milliers de transistors miniatures
@@ -194,19 +196,21 @@
 						<textarea data-template>
 						## Fiche d'identité
 
-						- C'est de l'information
+						La donnée c'est :
+						
+						- De l'information
 						- En informatique ce sont des valeurs numériques
 						- La donnée ne porte aucun sens en elle-même
 						- L'important, c'est **l'interprétation** qu'on lui donne
 						- Il faut donc un accord entre l'émetteur et le récepteur sur sa signification
-						
-						Prenons un exemple … <!-- .element: class="fragment" data-fragment-index="1" -->
 						
 						</textarea>
 					</section>
 					<section>
 						<h2>L'univers et le reste</h2>
 						<p>C'est quoi <em>42</em> ?</p> <!-- 7 ? -->
+						<h3>En binaire</h2>
+						<p>0010 1010</p>
 					</section>
 					<section>
 						<h2>Un age</h2>
@@ -236,12 +240,6 @@
 							<a href="https://en.wikipedia.org/wiki/File:EGA_Table.PNG">palette EGA</a>
 						</p>
 					</section>
-					<section>
-						<h2>Un son</h2>
-						<p>C'est la <em>fréquence</em> d'un
-							<a href="https://www.youtube.com/watch?v=2349N9YVvzY" class="preview">son grave</a>
-						</p>
-					</section>
 					<section data-markdown>
 						<textarea data-template>
 						## Plus concrètement
@@ -250,20 +248,21 @@
 						- C'est ce que l'on appelle le [binaire](https://www.rapidtables.com/convert/number/decimal-to-binary.html)
 						- A chaque nombre correspond un code binaire
 						- En général on travail avec des codes binaires de 8 chiffres 1 ou 0
-						- 3 = 0000 0011  | 42 = 0010 1010 | 255 = 1111 1111
+						- 3 = 0000 0011  
+						- 42 = 0010 1010 
+						- 255 = 1111 1111
 						</textarea>
 					</section>
 					<section>
 						<h2>Qui l'utilise ?</h2>
 
-						<p>Le microprocesseur transforme la donnée en provenance &larr;</p>
-						<p class="fragment">des périphériques</p>
-						<p class="fragment">et la transmet à &rarr;</p>
-						<p class="fragment">d'autres périphériques</p>
-						<p class="fragment">En général l'échange de données se fait par l'intermédiaire de la mémoire vive</p>
-						<aside class="notes">
-							C'est la fête au périphérique
-						</aside>
+						<p>Le microprocesseur transforme la donnée en provenance des périphériques</p>
+						<p class="fragment">et la transmet à d'autres périphériques</p>
+						<img class="fragment" src="images/dataflow.png"/>
+						 
+					</section>
+					<section>
+						<p>En général l'échange de données se fait par l'intermédiaire de la mémoire vive</p>
 					</section>
 					<section>
 						<h2>D'accord mais…</h2>
@@ -278,9 +277,19 @@
 						<textarea data-template>
 						## Fiche d'identité
 
-						- Ce sont des circuits électroniques
+						La mémoire vive c'est :
+						- Des circuits électroniques
 						- Capables de conserver une donnée tant qu'ils sont alimentés
 						- Un peu comme des interrupteurs commandés
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						## Ne pas confondre
+
+						Ne pas confondre avec la **mémoire morte**, un disque dur par exemple, 
+						qui conserve la donnée même éteinte mais qui est beaucoup plus **lente.**
+
 						</textarea>
 					</section>
 					<section data-markdown>
@@ -314,7 +323,7 @@
 						<h2>Se rappeler</h2>
 						<img src="images/memory-read.png" class="plain"/>
 					</section>
-					<section data-markdown>
+					<!--section data-markdown>
 						<textarea data-template>
 						## plusieurs types de mémoire
 
@@ -322,15 +331,29 @@
 						- Les piles
 						- Les files
 						</textarea>
-					</section>
+					</section-->
 					<section data-markdown>
 						<textarea data-template>
 						## Qui utilise la mémoire ?
 
 						- Elle sert de support au micro-processeur pour la manipulation des données
 						- Au même titre qu'un « plan de travail » pour le cuisinier
-						- Mais les périphériques aussi peuvent avoir des mémoires pour leurs données
 						</textarea>
+					</section>
+					<section>
+						<h2>En image</h2>
+						
+						<img src="images/cooker-big-picture-with-bench.png" class="plain"  height="500px"/>
+					</section>
+					<section>
+						<h2>En vrai</h2>
+						
+						<img src="images/cpu-big-picture-with-memory.png" class="plain"  height="500px"/>
+					</section>
+					<section>
+						<h2>Avec les périphériques</h2>
+						
+						<img src="images/cpu-big-picture-with-memory-and-periph.png" class="plain"  height="500px"/>
 					</section>
 					<section>
 						<h2>D'accord mais…</h2>
@@ -344,14 +367,25 @@
 					<section data-markdown>
 						<textarea data-template>
 						## Fiche d'identité
-
+					
+						Les périphériques sont :
 						- Des appareils électroniques
 						- Avec des éléments qui agissent sur le monde réèl (son, lumière, …)
 						- Et/ou des capteurs (son, lumière, bouton, …)
-						- Capables de produire de la donnée
-						- Ou d'en recevoir
+						- Capables de produire et/ou de recevoir de la donnée
 						- Ils donnent son sens à la donnée
-						- Le micro-processeur orchestre les flux de données entre eux
+						
+						</textarea>
+					</section>
+					
+					<section data-markdown>
+						<textarea data-template>
+						## Entré vs sortie
+
+						- les périphériques qui fournissent de la données sont des périphérique d'entrée
+						- Ceux qui en reçoivent sont des périphériques de sortie
+						- Certains sont les deux à la fois
+					
 						
 						Prenons quelques exemples… <!-- .element: class="fragment" data-fragment-index="1" -->
 						</textarea>
